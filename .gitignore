@@ -6,4 +6,4 @@ node_modules
 /client/dist/
 *.js
 *.log
-.zip
+*.zip
