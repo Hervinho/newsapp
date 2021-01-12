@@ -1,0 +1,55 @@
+<div class="animated fadeIn">
+        
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <input type="date" (change)="onDatePicked(mydatepicker.value)" #mydatepicker name="mydatepicker">
+            <button type="reset" (click)="clear()">Reload</button>
+          </div>
+          <div class="card-body">
+            <input type="text" class="form-control" [(ngModel)]="filterQuery" name="filterQuery" placeholder="search anything here">
+            <table class="table table-bordered table-striped table-sm" [mfData]="data | dataFilter: filterQuery" #mf="mfDataTable"
+              [mfRowsOnPage]="5">
+              <thead>
+                <tr>
+                  <th width="250">Title</th>
+                  <th width="250">Description</th>
+                  <th width="350">Content</th>
+                  <th>Author</th>
+                  <th>Source</th>
+                  <th>Published At</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let datum of mf.data">
+                  <td style="text-align: center;"><img src="{{ datum.urlToImage }}" height="200" width="240"/> 
+                    <br>{{ datum.title }}
+                  </td>
+                  <td>{{ datum.description }}</td>
+                  <td>{{ datum.content }}</td>
+                  <td>{{ datum.author }}</td>
+                  <td>{{ datum.source.name }}</td>
+                  <td>{{ datum.publishedAt }}</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="9">
+                    <mfBootstrapPaginator></mfBootstrapPaginator>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+            
+          </div>
+        </div>
+      </div>
+      <!--/.col-->
+    </div>
+    <!--/.row-->
+  </div>
+
+
+  
+  

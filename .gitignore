@@ -1,0 +1,9 @@
+/node_modules/
+node_modules
+.env
+/logs/*.json
+/server/dist/
+/client/dist/
+*.js
+*.log
+.zip
