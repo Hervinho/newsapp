@@ -46,38 +46,6 @@ This application holds the following folder structure:
 
 The Logs folder will have 2 types of file, a server.log file and erros.log files. The error log files will contains any errors on the server, and are rotated daily (i.e. files names will have a suffix of current date)
 
-## Scripts
+## Deployment
 
-The start.sh and stop.sh scripts are used to respectively start and stop the built app once deployed on the server.
-
-Note: The `build.sh` script in the root folder in code is used to build and package the app for deployment. the server will be compiled from TypeScript to ES5 JavaScript and the Angular app will be packaged using ng build command. The output of running this script is a generated zip file (deploy.zip) that you can deploy on your server. Note that the folder structure for the server will remain the same after.
-
-## Server structure
-
-- server/database: contains a sample .sql script
-- server/dist: will conatin the ES5 JavaScript compiled output of the build.sh script
-- server/lib: contains all the logic for the server, and has the following structure:
-
-### Configs - server/lib/configs/
-
-The configs folder contains all the app configurations needed, and has the following files:
-
-- `routes.config.ts` : where you add all your APIs with their respective routing files(e.g. /products)
-- `winston.config.ts` : this files just sets up Winston for all the logging.
-
-### Models - server/lib/models/
-
-This folder is where you add logic for your models, a model here is where you add logic related to a specifc table in your database.
-
-### Routes - server/lib/routes
-
-The routes folder will contain all your routes for the APIs that will be getting data from your models. You should create a route file for each of your model. The route files conatins all the HTTP methods (GET, POST, PUT) needed to access your resources through your models.
-For example, there is a `news.route.ts` file showing how the routes for the user model are created.
-
-### App.ts - server/lib/app.ts
-
-This is the main file that runs the server, you can specify and change the port here.
-
-### Server.ts - server/lib/server.ts
-
-Here is where you import all the routes, set up logging and configure Express with CORS, body-parser.
+The `build.sh` script in the root folder in code is used to build and package the app for deployment. the server will be compiled from TypeScript to ES5 JavaScript and the Angular app will be packaged using ng build command. The output of running this script is a generated zip file (deploy.zip) that you can deploy on your server.
