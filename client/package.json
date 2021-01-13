@@ -1,11 +1,11 @@
 {
-  "name": "gani-event-mgt-ui",
+  "name": "news-app",
   "version": "0.0.1",
-  "description": "Gani Event Management Platform UI",
+  "description": "News app",
   "author": {
-    "name": "Ganizani Consulting Services",
-    "url": "http://ganizaniconsultingservices.co.za/",
-    "github": "https://bitbucket.org/ganidevops/"
+    "name": "Hervinho",
+    "url": "https://bitbucket.org/Hervinho/",
+    "github": "https://bitbucket.org/Hervinho/"
   },
   "contributors": [
     {
@@ -24,7 +24,6 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "postinstall": "ng build --output-path dist"
-
   },
   "private": true,
   "dependencies": {
