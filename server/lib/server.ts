@@ -22,7 +22,7 @@ class Server {
         this.app.use(bodyParser.json());
         this.app.use(bodyParser.urlencoded({ extended: false }));
 
-        this.app.use(express.static(path.join(__dirname, '../../client/dist' )));
+        //this.app.use(express.static(path.join(__dirname, '../../client/dist' )));
 
         this.app.use(function (req, res, next) {
             res.header('Access-Control-Allow-Origin', '*');
