@@ -20,33 +20,9 @@ After you have installed all the prerequisites, you can install the app by doing
 
 # Deployment
 
-Uncomment line 25 in `server/lib/server.ts` and run `build.sh` script in the root folder in code is used to build and package the app for deployment. the server will be compiled from TypeScript to ES5 JavaScript and the Angular app will be packaged using ng build command. The output of running this script is a generated zip file (deploy.zip) that you can deploy on your server.
+Uncomment line 25 in `server/lib/server.ts` and run `build.sh` script in the root folder in code is used to build and package the app for deployment. The server will be compiled from TypeScript to ES5 JavaScript and the Angular app will be packaged using ng build command. The output of running this script is a generated zip file (deploy.zip) that you can deploy on your server.
 
 The app runs on port 5500
-
-# Usage & Project Structure
-
-This application holds the following folder structure:
-
-- Client: which contains the Angular app
-- Logs: which will contain the server logs
-- node_modules: the server modules
-- scripts: start and stop scripts for server deployment
-- server: which contains the Node.js server app
-
-## Client structure
-
-- client/node_modules: contains modules for the Angular app
-- client/dist: will contain the output of ng build command when building the client app for deployment
-- client/src/assets: contains all assets such as images
-- client/src/environments: contains files where you declare environemnt-specific variables (e.g. API URLs)
-- client/src/scss: contains all CSS files
-- client/src/app: contains the main angular app. Here we have 4 other folders:
-
-    * client/src/app/containers: contains the main app HTML layout structure
-    * client/src/app/helpers: contains helper functions, such as auth guards (to restrict access to certain routes)
-    * client/src/app/services: contains files making calls to the Node.js server
-    * client/src/app/views: contains all the different pages (Login, register, home, etcetera)
 
 ## Logs
 
