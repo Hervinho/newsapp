@@ -13,16 +13,15 @@ After you have installed all the prerequisites, you can install the app by doing
 - Navigate to client directory and run `npm install`.
 - Navigate to server directory and run `npm install`.
 
-# Running the application
+# Running the application in development
 
 - Server: Navigate to the server directory and run `npm run server`
 - Client: Navigate to the client directory and run `ng server`
 
 # Deployment
 
-Uncomment line 25 in `server/lib/server.ts` and run `build.sh` script in the root folder in code is used to build and package the app for deployment. The server will be compiled from TypeScript to ES5 JavaScript and the Angular app will be packaged using ng build command. The output of running this script is a generated zip file (deploy.zip) that you can deploy on your server.
-
-The app runs on port 5500
+Uncomment line 25 in `server/lib/server.ts` and run `build.sh` script in the root folder in code is used to build and package the app for deployment and generate deploy.zip file that you can deploy on your server. 
+After unzipping, you can run the app with `npm start`. The app runs on port 5500
 
 ## Logs
 
